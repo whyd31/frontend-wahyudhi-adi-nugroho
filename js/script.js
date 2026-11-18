@@ -1,4 +1,6 @@
-
+/* ==================================================
+  NAVBAR MENU
+================================================== */
 $(document).ready(function () {
 
   const navbar = $(".navbar-header");
@@ -30,8 +32,9 @@ $(document).ready(function () {
 
 });
 
-
-
+/* ==================================================
+  SECTION FIVE TABLE
+================================================== */
 document.addEventListener("DOMContentLoaded", function () {
 
   const tabs = document.querySelectorAll(".section-five-tab");
@@ -43,23 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const target = this.getAttribute("data-tab");
 
-      // Reset semua tab
       tabs.forEach(function (item) {
         item.classList.remove("active");
         item.setAttribute("aria-selected", "false");
       });
 
-      // Aktifkan tab yang diklik
       this.classList.add("active");
       this.setAttribute("aria-selected", "true");
 
-      // Sembunyikan semua konten
       contents.forEach(function (content) {
         content.classList.remove("active");
         content.hidden = true;
       });
 
-      // Tampilkan konten sesuai tab
       const activeContent = document.getElementById(target);
 
       if (activeContent) {
@@ -68,7 +67,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
     });
-
   });
-
 });
